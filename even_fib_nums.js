@@ -36,10 +36,25 @@ function _highestFibonacciNumber (maxFibValue){
   var highest = 0;
 
   //define your base case, validate your input
+  var fibonacciSubset = [1,2];
 
+  var first = 1;
+  var second = 2;
+  var i = 1;
 
+  while(fibonacciSubset[i] < maxFibValue) {
+  	i++;
+  	fibonacciSubset[i] = first + second;
+  	first = second;
+  	second = fibonacciSubset[i];	
+  }
   //do your work here
-
+  if (fibonacciSubset[fibonacciSubset.length -1] > maxFibValue) {
+  	fibonacciSubset.pop();
+  	highest = fibonacciSubset.pop();
+  } else {
+	  highest = fibonacciSubset.pop();
+  }
   return highest;
 };
 

@@ -33,7 +33,7 @@ describe( 'Sum of even numbers in the Fibonnacci sequence', function() {
  */
 
 // unskip the following test to test your highestFibonacciNumber() function
-describe.skip( 'Highest number in Fibonacci sequence', function() {
+describe( 'Highest number in Fibonacci sequence', function() {
   it( 'should return the highest Fibonacci number less than the given input', function() {
     var highest = fibonnaciNums.highestFibonacciNumber( 100 );
     highest.should.equal( 89 );
