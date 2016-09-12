@@ -10,6 +10,24 @@ function _sumFibs( maxFibValue ) {
 
   // do your work here
 
+  var fibonacciSubset = [1,2];
+
+  var first = 1;
+  var second = 2;
+  var i = 1;
+
+  while(fibonacciSubset[i] < maxFibValue) {
+  	i++;
+  	fibonacciSubset[i] = first + second;
+  	first = second;
+  	second = fibonacciSubset[i];	
+  }
+
+  for (var i = 0; i < fibonacciSubset.length; i++) {
+  	if (fibonacciSubset[i] % 2 === 0) {
+  		sum += fibonacciSubset[i];
+  	}
+  }
   return sum;
 }
 

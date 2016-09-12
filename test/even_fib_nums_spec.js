@@ -16,11 +16,11 @@ describe( 'Sum of even numbers in the Fibonnacci sequence', function() {
 
   // when the 2 tests pass, unskip the next test and
   // change the expected value to the correct result
-  it.skip( 'should return the sum of all even Fibonacci numbers when given 4,000,000', function() {
+  it( 'should return the sum of all even Fibonacci numbers when given 4,000,000', function() {
     var sum = fibonnaciNums.sumFibs(4000000);
 
     // CHANGE THE VALUE OF 'X' to the correct number
-    sum.should.equal( 'X' );
+    sum.should.equal(4613732);
   });
 });
 
